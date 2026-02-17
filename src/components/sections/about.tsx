@@ -44,7 +44,7 @@ export function About() {
       <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
         {STATS.map((stat, i) => (
           <ScrollReveal key={stat.label} delay={0.1 * i}>
-            <div className="glass rounded-xl p-6 text-center">
+            <div className="glass rounded-xl p-4 md:p-6 text-center">
               <p className="font-mono text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary">
                 {stat.value}
               </p>

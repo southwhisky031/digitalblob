@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -25,14 +26,16 @@ export function ScrollReveal({
   duration = 0.6,
 }: ScrollRevealProps) {
   const offset = directionOffset[direction];
+  const prefersReducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
+  // 항상 같은 컴포넌트 트리를 반환하여 하이드레이션 불일치 방지
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, x: offset.x, y: offset.y }}
+      initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, x: offset.x, y: offset.y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration, delay, ease: "easeOut" }}
+      viewport={{ once: true, amount: "some" }}
+      transition={prefersReducedMotion ? { duration: 0 } : { duration, delay, ease: "easeOut" }}
     >
       {children}
     </motion.div>

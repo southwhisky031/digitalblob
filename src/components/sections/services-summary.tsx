@@ -40,7 +40,7 @@ export function ServicesSummary() {
           const Icon = ICON_MAP[service.icon] || TrendingUp;
           return (
             <ScrollReveal key={service._id} delay={i * 0.1}>
-              <div className="glass rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] group-hover/services:[&:not(:hover)]:opacity-60">
+              <div className="glass rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] md:group-hover/services:[&:not(:hover)]:opacity-60">
                 <Icon className="mb-4 size-8 text-primary" />
                 <h3 className="font-display text-xl font-semibold">
                   {service.title}
@@ -50,7 +50,7 @@ export function ServicesSummary() {
                 </p>
                 <Link
                   href={`/services#${service.slug.current}`}
-                  className="mt-4 inline-block text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                  className="mt-4 inline-block py-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
                 >
                   자세히 보기 &rarr;
                 </Link>

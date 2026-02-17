@@ -35,7 +35,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <DigitalBlobLogo className="h-10 w-auto sm:h-12" />
+          <DigitalBlobLogo className="h-10 w-auto sm:h-12" compact />
         </Link>
 
         {/* Desktop Navigation */}
@@ -75,7 +75,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    className="py-3 text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>

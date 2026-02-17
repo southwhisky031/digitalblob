@@ -1,5 +1,4 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import {
   TrendingUp,
@@ -23,6 +22,15 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   BarChart3,
   Target,
   Users,
+};
+
+// 나노바나나 생성 이미지 경로 (이미지 준비 후 null → 경로로 변경)
+const SERVICE_IMAGES: Record<string, string | null> = {
+  "marketing-planning": "/images/services/marketing-planning.webp",
+  "campaign-operating": "/images/services/campaign-operating.webp",
+  "data-consulting": "/images/services/data-consulting.webp",
+  "creative-planning": "/images/services/creative-planning.webp",
+  "influencer-marketing": "/images/services/influencer-marketing.webp",
 };
 
 const PROCESS_STEPS = [
@@ -59,7 +67,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden py-24 md:py-32">
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+            <h1 className="font-display text-[clamp(2.25rem,5vw,4.5rem)] font-bold tracking-tight">
               Our Services
             </h1>
           </ScrollReveal>
@@ -81,17 +89,27 @@ export default function ServicesPage() {
             return (
               <ScrollReveal key={service._id}>
                 <div
-                  className={`glass rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col gap-8 ${
+                  className={`glass rounded-3xl p-5 sm:p-8 md:p-12 lg:p-16 flex flex-col gap-8 ${
                     isEven ? "lg:flex-row-reverse" : "lg:flex-row"
                   } lg:items-center`}
                 >
-                  {/* Icon side */}
-                  <div className="flex shrink-0 items-center justify-center lg:w-1/3">
-                    <div className="flex size-24 items-center justify-center rounded-3xl bg-primary/10 md:size-32">
-                      {Icon && (
-                        <Icon className="size-12 text-primary md:size-16" />
-                      )}
-                    </div>
+                  {/* 이미지 / 아이콘 영역 */}
+                  <div className="relative overflow-hidden rounded-2xl lg:w-2/5">
+                    {SERVICE_IMAGES[service.slug.current] ? (
+                      <Image
+                        src={SERVICE_IMAGES[service.slug.current]!}
+                        alt={service.title}
+                        width={600}
+                        height={400}
+                        className="aspect-[4/3] w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-primary/15 via-secondary/5 to-background">
+                        {Icon && (
+                          <Icon className="size-16 text-primary/30 md:size-20" />
+                        )}
+                      </div>
+                    )}
                   </div>
 
                   {/* Content side */}

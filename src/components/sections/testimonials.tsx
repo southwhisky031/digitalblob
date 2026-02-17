@@ -18,6 +18,7 @@ import { useState } from "react";
 export function Testimonials() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
 
   const onSelect = useCallback(() => {
     if (!api) return;
@@ -34,12 +35,12 @@ export function Testimonials() {
   }, [api, onSelect]);
 
   useEffect(() => {
-    if (!api) return;
+    if (!api || !autoplay) return;
     const interval = setInterval(() => {
       api.scrollNext();
     }, 5000);
     return () => clearInterval(interval);
-  }, [api]);
+  }, [api, autoplay]);
 
   return (
     <SectionWrapper>
@@ -52,7 +53,7 @@ export function Testimonials() {
         </p>
       </div>
 
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl" onMouseDown={() => setAutoplay(false)} onTouchStart={() => setAutoplay(false)}>
         <Carousel
           opts={{ align: "center", loop: true }}
           setApi={setApi}
@@ -90,18 +91,22 @@ export function Testimonials() {
           <CarouselNext className="hidden md:flex" />
         </Carousel>
 
-        <div className="mt-4 flex justify-center gap-2">
+        <div className="mt-4 flex justify-center gap-0">
           {DUMMY_TESTIMONIALS.map((_, i) => (
             <button
               key={i}
-              onClick={() => api?.scrollTo(i)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === current
-                  ? "w-6 bg-primary"
-                  : "w-2 bg-muted-foreground/30"
-              }`}
+              onClick={() => { setAutoplay(false); api?.scrollTo(i); }}
+              className="p-3"
               aria-label={`Go to slide ${i + 1}`}
-            />
+            >
+              <span
+                className={`block h-2 rounded-full transition-all duration-300 ${
+                  i === current
+                    ? "w-6 bg-primary"
+                    : "w-2 bg-muted-foreground/30"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>

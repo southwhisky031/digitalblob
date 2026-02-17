@@ -51,7 +51,7 @@ export function ValueProposition() {
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {VALUE_ITEMS.map((item, i) => (
-          <ScrollReveal key={item.title} delay={i * 0.1}>
+          <ScrollReveal key={item.title} delay={i * 0.1} className={i === VALUE_ITEMS.length - 1 && VALUE_ITEMS.length % 2 !== 0 ? "sm:col-span-2 lg:col-span-1" : undefined}>
             <div className="glass rounded-xl p-6 transition-transform duration-300 hover:scale-105 h-full">
               <item.icon className={`mb-4 size-8 ${item.color}`} />
               <h3 className="font-display text-lg font-semibold">

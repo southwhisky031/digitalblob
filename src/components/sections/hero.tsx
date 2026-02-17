@@ -11,7 +11,7 @@ import { DUMMY_SITE_SETTINGS } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-dvh items-center justify-center overflow-hidden">
       <BlobBackground className="absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">

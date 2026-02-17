@@ -22,8 +22,7 @@ export const COMPANY_INFO = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Work", href: "/work" },
+  { label: "Our Works", href: "/about" },
   { label: "Reference", href: "/reference" },
   { label: "Contact", href: "/contact" },
 ] as const;

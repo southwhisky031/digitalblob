@@ -48,7 +48,7 @@ export default function WorkPage() {
         <BlobBackground className="opacity-30" interactive={false} />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h1 className="font-display text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+            <h1 className="font-display text-[clamp(2.25rem,5vw,4.5rem)] font-bold tracking-tight">
               Our Work
             </h1>
           </ScrollReveal>
@@ -68,7 +68,7 @@ export default function WorkPage() {
             onValueChange={setActiveTab}
             className="mb-12"
           >
-            <TabsList className="flex flex-wrap gap-1 h-auto bg-transparent">
+            <TabsList className="flex flex-nowrap gap-1 h-auto bg-transparent overflow-x-auto scrollbar-hide md:flex-wrap md:overflow-x-visible">
               {categories.map((cat) => (
                 <TabsTrigger
                   key={cat}
@@ -101,7 +101,7 @@ export default function WorkPage() {
                       {cs.client}
                     </Badge>
                     {/* Hover overlay */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-background/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100 p-6">
+                    <div className="absolute inset-0 hidden md:flex flex-col items-center justify-center bg-background/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100 p-6">
                       <p className="text-sm text-center text-foreground/80 line-clamp-3">
                         {cs.challenge}
                       </p>

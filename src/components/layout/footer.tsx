@@ -35,7 +35,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </Link>
@@ -55,7 +55,7 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm capitalize text-muted-foreground transition-colors hover:text-foreground"
+                  className="py-2 text-sm capitalize text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {name}
                 </a>

@@ -1,8 +1,14 @@
-export function DigitalBlobLogo({ className = "" }: { className?: string }) {
+export function DigitalBlobLogo({
+  className = "",
+  compact = false,
+}: {
+  className?: string;
+  compact?: boolean;
+}) {
   return (
     <svg
       className={className}
-      viewBox="0 0 1333.3333 1333.3333"
+      viewBox={compact ? "50 490 1240 320" : "0 0 1333.3333 1333.3333"}
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>

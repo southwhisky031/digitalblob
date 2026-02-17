@@ -86,9 +86,12 @@ export function SelectedWork() {
                         />
                       </span>
                     </div>
+                    <span className="mt-3 inline-block text-sm font-medium text-primary md:hidden">
+                      자세히 보기 →
+                    </span>
                   </div>
 
-                  <div className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="absolute inset-0 hidden items-center justify-center bg-background/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100 md:flex">
                     <span className="font-display text-lg font-semibold">
                       자세히 보기 &rarr;
                     </span>

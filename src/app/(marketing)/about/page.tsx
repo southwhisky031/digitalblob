@@ -164,24 +164,24 @@ export default function AboutPage() {
       <SectionWrapper className="pt-0">
         <div className="mx-auto max-w-5xl text-center">
           <ScrollReveal>
-            <h2 className="font-display text-3xl font-bold md:text-4xl lg:text-5xl">
+            <h2 className="font-display text-[1.65rem] font-bold md:text-4xl lg:text-5xl">
               데이터가 증명하는,{" "}
               <span className="text-primary">최적의 경로</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
               미로 문제를 마주한 &apos;블롭&apos;은 놀라운 기억력과 학습능력을
               바탕으로 가장 효율적인 탈출 경로를 빠르게 찾아냅니다.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
               DigitalBlob은 정확한 시장 분석과 고객의 니즈 파악을 통해 브랜드의 본질적 가치를 발견하고,
               <br className="hidden md:inline" />
               브랜딩과 퍼포먼스를 아우르는 마케팅과 일관성 있는 여정 설계를 통해 고객이 브랜드에 열광할 수 있는 최적의 경로를 제시합니다.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.25}>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
               다양한 산업의 디지털마케팅 경험과 성공 노하우를 보유한 각 분야별 스페셜리스트들로 구성되어 있으며,
               <br className="hidden md:inline" />
               디지털 주요 매체의 운영은 물론 크리에이티브 기획, Data 기반의 컨설팅 등 폭넓은 디지털 마케팅을 수행합니다.
@@ -210,11 +210,6 @@ export default function AboutPage() {
             <ScrollReveal
               key={item.title}
               delay={i * 0.1}
-              className={
-                i === WORK_SCOPE.length - 1 && WORK_SCOPE.length % 2 !== 0
-                  ? "col-span-2 md:col-span-1"
-                  : undefined
-              }
             >
               <div className="group relative overflow-hidden bg-background">
                 {/* 배경: 이미지 또는 그래디언트 */}
@@ -303,23 +298,30 @@ export default function AboutPage() {
           {/* 데스크톱 연결선 */}
           <div className="absolute top-8 left-[12%] right-[12%] hidden h-px bg-border/40 md:top-10 md:block" />
 
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+          {/* 모바일 세로 연결선 */}
+          <div className="absolute top-8 bottom-8 left-8 w-px bg-border/40 md:hidden" />
+
+          {/* 모바일: 세로 흐름 / 데스크톱: 가로 4열 */}
+          <div className="flex flex-col gap-8 md:grid md:grid-cols-4 md:gap-6">
             {PROCESS_STEPS.map((step, i) => (
               <ScrollReveal key={step.number} delay={i * 0.15}>
-                <div className="relative flex flex-col items-center text-center">
+                {/* 모바일: 가로 배치 (원 + 텍스트) */}
+                <div className="relative flex items-start gap-5 md:flex-col md:items-center md:text-center">
                   <div
-                    className={`relative z-10 flex size-16 items-center justify-center rounded-full shadow-lg md:size-20 ${step.color}`}
+                    className={`relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full shadow-lg md:size-20 ${step.color}`}
                   >
                     <span className="font-mono text-lg font-bold text-white md:text-xl">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="mt-4 font-display text-sm font-semibold md:text-base">
-                    {step.title}
-                  </h3>
-                  <p className="mt-1.5 text-xs text-muted-foreground md:text-sm">
-                    {step.description}
-                  </p>
+                  <div className="pt-2 md:pt-0">
+                    <h3 className="font-display text-sm font-semibold md:mt-4 md:text-base">
+                      {step.title}
+                    </h3>
+                    <p className="mt-1.5 text-xs text-muted-foreground md:text-sm">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}

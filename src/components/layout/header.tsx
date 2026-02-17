@@ -65,9 +65,9 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
+            <SheetContent side="right" className="w-72 px-6">
               <SheetTitle className="font-display text-lg font-bold">
-                digitalblob
+                DigitalBlob
               </SheetTitle>
               <nav className="mt-8 flex flex-col gap-4">
                 {NAV_LINKS.map((link) => (
@@ -80,7 +80,7 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
-                <Button asChild className="mt-4">
+                <Button asChild size="sm" className="mt-4 w-fit">
                   <Link href="/contact" onClick={() => setOpen(false)}>
                     문의하기
                   </Link>

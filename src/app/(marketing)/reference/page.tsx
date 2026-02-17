@@ -127,9 +127,9 @@ export default function ReferencePage() {
       </section>
 
       {/* 숫자 섹션 */}
-      <SectionWrapper className="pt-0 pb-8 md:pb-14 lg:pb-16">
+      <SectionWrapper className="pb-8 md:pb-14 lg:pb-16">
         <ScrollReveal>
-          <h2 className="text-center font-display text-3xl font-bold md:text-4xl">
+          <h2 className="text-center font-display text-[1.55rem] font-bold md:text-4xl">
             파트너들은 digitalblob과{" "}
             <br className="hidden md:inline" />
             성장을 위한 답을 찾고 있습니다
@@ -173,12 +173,12 @@ export default function ReferencePage() {
             onValueChange={setActiveTab}
             className="mt-8 mb-12"
           >
-            <TabsList className="flex flex-nowrap gap-1 h-auto bg-transparent overflow-x-auto scrollbar-hide md:flex-wrap md:overflow-x-visible">
+            <TabsList className="flex flex-nowrap gap-2 h-auto bg-transparent overflow-x-auto scrollbar-hide snap-x snap-mandatory px-4 -mx-4 md:flex-wrap md:overflow-x-visible md:snap-none md:px-0 md:mx-0">
               {categories.map((cat) => (
                 <TabsTrigger
                   key={cat}
                   value={cat}
-                  className="rounded-full px-4 py-2 text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  className="shrink-0 snap-start rounded-full border border-border/50 px-4 py-2 text-sm data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                 >
                   {cat}
                 </TabsTrigger>

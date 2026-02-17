@@ -173,17 +173,19 @@ export default function ReferencePage() {
             onValueChange={setActiveTab}
             className="mt-8 mb-12"
           >
-            <TabsList className="flex flex-nowrap gap-2 h-auto bg-transparent overflow-x-auto scrollbar-hide snap-x snap-mandatory px-4 -mx-4 md:flex-wrap md:overflow-x-visible md:snap-none md:px-0 md:mx-0">
-              {categories.map((cat) => (
-                <TabsTrigger
-                  key={cat}
-                  value={cat}
-                  className="shrink-0 snap-start rounded-full border border-border/50 px-4 py-2 text-sm data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-                >
-                  {cat}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <div className="overflow-hidden">
+              <TabsList className="flex flex-nowrap gap-2 h-auto bg-transparent overflow-x-auto scrollbar-hide md:flex-wrap md:overflow-x-visible">
+                {categories.map((cat) => (
+                  <TabsTrigger
+                    key={cat}
+                    value={cat}
+                    className="shrink-0 rounded-full border border-border/50 px-4 py-2 text-sm data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  >
+                    {cat}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
           </Tabs>
         </ScrollReveal>
 

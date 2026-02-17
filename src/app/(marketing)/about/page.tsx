@@ -211,7 +211,12 @@ export default function AboutPage() {
               key={item.title}
               delay={i * 0.1}
             >
-              <div className="group relative overflow-hidden bg-background">
+              <div
+                className="group relative overflow-hidden bg-background outline-none"
+                tabIndex={0}
+                role="button"
+                aria-label={`${item.title} 상세 보기`}
+              >
                 {/* 배경: 이미지 또는 그래디언트 */}
                 <div
                   className={`relative ${item.image ? "" : `bg-gradient-to-br ${item.gradient}`} aspect-[3/4]`}
@@ -252,8 +257,8 @@ export default function AboutPage() {
                     </h3>
                   </div>
 
-                  {/* 호버 오버레이 */}
-                  <div className="absolute inset-0 flex flex-col justify-center bg-background/90 p-4 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:opacity-100 sm:p-5">
+                  {/* 호버/탭 오버레이: 모바일 탭(focus), 데스크톱 hover */}
+                  <div className="absolute inset-0 flex flex-col justify-center bg-background/90 p-4 opacity-0 backdrop-blur-md transition-all duration-500 group-focus-within:opacity-100 md:group-hover:opacity-100 sm:p-5">
                     <span className="font-mono text-xs text-primary">
                       0{i + 1}
                     </span>

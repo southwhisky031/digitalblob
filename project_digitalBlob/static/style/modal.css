@@ -1,0 +1,150 @@
+.dimmed {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+
+.modal {
+    width: 100%;
+    background-color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    max-width: 480px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.modal.xs {
+    max-width: 250px
+}
+
+.modal.sm {
+    max-width: 500px
+}
+
+.modal.lg {
+    max-width: 720px
+}
+
+.modal.xl {
+    max-width: 1040px;
+}
+
+.modal .top {
+    padding: 16px 24px
+}
+
+.modal .top .close-btn {
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/images/ic_24_close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0;
+    cursor: pointer
+}
+
+.modal .contents {
+    padding: 16px 24px 24px;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+}
+
+.modal .contents li {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    position: relative
+}
+
+.modal .contents .list li::after {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 7px;
+    width: 4px;
+    height: 4px;
+    background-color: var(--black);
+    content: "";
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%
+}
+
+.modal .contents p+.table-area,
+.detail-table {
+    margin-top: 24px
+}
+
+.modal .contents h3+.input-wrap,
+.modal .contents h3+.row,
+.modal .contents h3+textarea {
+    margin-top: 4px
+}
+
+.modal .contents>.table-area:first-child .table {
+    margin-top: 0;
+}
+
+.modal table:not(.no-md-style)::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--grey900);
+    content: ""
+}
+
+.modal .table:not(.no-md-style) td,
+.modal .table:not(.no-md-style) th {
+    border-bottom: 1px solid var(--grey250);
+    color: var(--grey700);
+    text-align: center
+}
+
+.modal .table:not(.no-md-style) th {
+    padding: 12px 13px;
+    background-color: var(--grey250);
+    font-weight: 500
+}
+
+.modal .table:not(.no-md-style) td {
+    padding: 12px;
+    font-weight: 400
+}
+
+.modal .table:not(.no-md-style) td+td,
+.modal .table:not(.no-md-style) th+th {
+    border-left: 1px solid var(--grey250)
+}
+
+.modal .btn-wrap {
+    padding-bottom: 24px
+}
+
+.btn-wrap {
+    gap: 12px;
+    justify-content: center
+}
+
+.btn-wrap button {
+    min-width: 120px
+}

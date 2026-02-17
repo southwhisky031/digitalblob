@@ -1,0 +1,4 @@
+로컬 구동 2가지
+
+1. termianl -> New terminal -> python main.py
+2. index.html 클릭 후 (ALT+ L + O)

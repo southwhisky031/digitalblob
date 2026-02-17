@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>BRANDEST</title>
+    <meta
+      name="description"
+      content="브랜디스트 - 당신의 브랜드를 완성하는 파트너"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BRANDEST" />
+    <meta
+      property="og:description"
+      content="브랜디스트 - 당신의 브랜드를 완성하는 파트너"
+    />
+    <meta property="og:image" content="static/assets/images/thumnail.png" />
+    <meta property="og:url" content="https://brandest.co.kr" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="static/assets/images/thumnail.png" />
+
+    <link
+      rel="icon"
+      href="static/assets/images/favicon_B.svg"
+      type="image/svg+xml"
+    />
+    <link href="static/style/common.css" rel="stylesheet" />
+    <link href="static/style/fonts.css" rel="stylesheet" />
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=95ee486eacbc4515ce9a27bad129de09"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="static/js/common.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="static/assets/images/logo_db.svg" alt="" />
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav class="nav-menu">
+        <button class="sec_btn" data-id="section1">intro</button>
+        <button class="sec_btn" data-id="section2">Reference</button>
+        <button class="sec_btn" data-id="section3">Work Scope</button>
+        <button class="sec_btn" data-id="section4">Contact</button>
+      </nav>
+    </header>
+    <div class="content wrap">
+      <section id="section1" class="container">
+        <div class="company_intro">
+          <img src="static/assets/images/logo_db.svg" alt="" />
+        </div>
+
+        <div class="test">
+          <span class="company_desc"
+            >정확한 시장 분석과 고객의 니즈 파악을 통해 브랜드의 본질적 가치를
+            발견하고
+            <br />
+            브랜딩과 퍼포먼스를 아우르는 마케팅과 일관성 있는 여정 설계를 통해
+            <br />
+            고객이 브랜드에 열광할 수 있는 최적의 경로를 찾아줍니다.
+          </span>
+          <span class="company_desc">
+            다양한 산업의 디지털마케팅 경험과 성공 노하우를 보유한 각 분야별
+            스페셜리스트들로 구성되어 있으며
+            <br />
+            디지털 주요 매체의 운영은 물론 크리에이티브 기획, Data 기반의 컨설팅
+            등 폭넓은 디지털 마케팅을 수행합니다
+          </span>
+        </div>
+      </section>
+      <section id="section2" class="sec02 container">
+        <h4 class="tit">Work Scope</h4>
+        <div class="cardList">
+          <dl>
+            <dt>Marketing Planning</dt>
+            <dd>시장과 경쟁상황 분석을 통한 인사이트 도출</dd>
+            <dd>효율적인 마케팅 전략 및 플랜 기획</dd>
+          </dl>
+          <dl>
+            <dt>Campaign Operating</dt>
+            <dd>캠페인 목표와 KPI 달성을 위한 최적화 진행</dd>
+            <dd>셀프서브 매체&트래킹 플랫폼 운영 및 컨설팅</dd>
+          </dl>
+          <dl>
+            <dt>Data 기반 컨설팅</dt>
+            <dd>MMP, GA4와 같은 데이터 측정 도구 활용</dd>
+            <dd>타겟 고객, 소재, 매체 효율 등 데이터 기반의 의사결정</dd>
+          </dl>
+          <dl>
+            <dt>Creative Planning</dt>
+            <dd>
+              공략할 시장과 고객, 플랫폼의 특수성에 기반한 최적의 크리에이티브
+              기획, 제작
+            </dd>
+          </dl>
+          <dl>
+            <dt>인플루언서<br />협업 마케팅</dt>
+            <dd>
+              먹방, 뷰티, 금융 등 각 분야별 인플루언서를 활용한 마케팅 기획
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <section id="section3" class="main-client__imgs container">
+        <div class="client_intro">
+          <div class="client_title">REFERENCE</div>
+          <div class="client_desc">
+            브랜디스트는 다양한 분야의 클라이언트과 함께 성공적인 디지털마케팅
+            캠페인을 만들어 가고 있습니다.
+          </div>
+          <div class="client-logo-wrapper">
+            <div class="client-logo client-logo-row1">
+              <!-- 원본 세트 -->
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/삼성.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/미래에셋그룹.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/삼성자산운용.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/신한금융투자.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/증권플러스 비상장.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/나이스신용평가.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/네오위즈.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/넷마블.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/펄어비스.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/라인.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/조이씨티.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/요기요.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/트립닷컴.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/밀리의서재.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/레진.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="client-logo client-logo-row2">
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/롯데면세점2.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/이랜드 리테일.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/SSF SHOP.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/에코.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/탑텐.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/SK매직.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/안랩.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/애플.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/웅진씽크빅.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/대성마이맥.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/아모레퍼시픽.svg"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/종근당건강.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/에버셀.png"
+                  alt=""
+                />
+              </div>
+              <div class="client-logo__item">
+                <img
+                  src="static/assets/images/advertiser logo/김정문알로에.png"
+                  alt=""
+                />
+              </div>
+              <!--사진 더 넣을거면 아래 코드 붙여넣기-->
+              <!--src만 맞춰라 jtj-->
+              <!-- <div class="client-logo__item">
+                                    <img src="static/assets/images//advertiser logo/logo.svg" alt="">
+                                </div> -->
+            </div>
+          </div>
+        </div>
+        <button
+          class="download_btn"
+          onclick="download_pdf()"
+          style="margin-top: 0; color: #ffffff"
+        >
+          Download Company Profile
+        </button>
+      </section>
+      <section id="section4" class="container">
+        <div class="contact-title-wrapper">
+          <div class="contact_title">CONTACT</div>
+        </div>
+
+        <div class="cont-contact">
+          <div class="map_container">
+            <div class="contact-tit">오시는 길</div>
+            <div class="contact-desc">
+              서울특별시 서초구 서초대로 398 BNK 디지털타워 5층, 패스트파이브
+              508호
+            </div>
+            <div id="map" class="map"></div>
+          </div>
+
+          <div class="main-contact">
+            <div class="main-contact__cont">
+              <form name="frm" id="frm" onsubmit="">
+                <div class="main-contact__tit">문의사항</div>
+                <div class="form-items">
+                  <div class="form-item">
+                    <input
+                      type="text"
+                      name="name"
+                      required=""
+                      placeholder="이름"
+                      class="inp type-icon icon-user"
+                    />
+                  </div>
+                  <div class="form-item">
+                    <input
+                      type="text"
+                      name="email"
+                      required=""
+                      placeholder="이메일"
+                      class="inp type-icon icon-email"
+                    />
+                  </div>
+                  <div class="form-item">
+                    <input
+                      type="text"
+                      name="tel"
+                      required=""
+                      placeholder="전화번호"
+                      class="inp type-icon icon-tel"
+                    />
+                  </div>
+                  <div class="form-item type-textarea">
+                    <textarea
+                      name="message"
+                      required=""
+                      cols="30"
+                      rows="10"
+                      class="textarea"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="btn-area">
+                  <button
+                    type="button"
+                    class="btn type-txt-line"
+                    id="sendEmail"
+                  >
+                    문의하기
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- 여기서부터 footer 추가 -->
+        <footer class="footer">
+          <div class="footer-area">
+            <div class="footer-desc">
+              ㈜브랜디스트 | 사업자등록번호 : 333-81-03134 | 서울특별시 서초구
+              서초대로 398 BNK 디지털타워 5층, Fastfive 508호
+              <br />
+              Copyright © 2025 Digital-Blob. All rights reserved.
+            </div>
+            <div class="footer-logo">
+              <img src="static/assets/images/logo_db.svg" alt="" />
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+  </body>
+  <script>
+    const wrap = document.getElementsByClassName("wrap")[0];
+    const container = document.getElementsByClassName("container");
+
+    //KakaoMap API
+    window.onload = function () {
+      console.log("페이지 로드 완료");
+
+      if (typeof kakao !== "undefined" && kakao.maps) {
+        console.log("카카오 SDK 로드됨");
+
+        var kakaoMap = document.getElementById("map");
+        if (kakaoMap) {
+          var options = {
+            center: new kakao.maps.LatLng(
+              37.496626448842841,
+              127.02513869170326
+            ),
+            level: 3,
+          };
+
+          var map = new kakao.maps.Map(kakaoMap, options);
+          var marker = new kakao.maps.Marker({
+            position: map.getCenter(),
+          });
+          marker.setMap(map);
+          console.log("카카오맵 생성 완료!");
+        }
+      } else {
+        console.log("카카오맵 SDK가 로드되지 않았습니다.");
+      }
+    };
+
+    $(".sec_btn").click(function (e) {
+      e.preventDefault();
+      moveToSection($(this).attr("data-id"));
+    });
+
+    let page = 0; // 영역 포지션 초기값
+    const end = container.length - 1;
+    let isScrolling = false; // 스크롤 중복 방지
+
+    window.addEventListener(
+      "wheel",
+      (e) => {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        if (e.deltaY > 0) {
+          page = Math.min(page + 1, end);
+        } else if (e.deltaY < 0) {
+          page = Math.max(page - 1, 0);
+        }
+
+        console.log(page);
+
+        container[page].scrollIntoView({ behavior: "smooth" });
+        if (page === end) {
+          $(".footer").show();
+          container[page].style.paddingBottom = "150px"; // 마지막 섹션에 여백 추가
+        } else {
+          $(".footer").hide();
+          container[page].style.paddingBottom = "0"; // 다른 섹션일 땐 원래대로
+        }
+
+        setTimeout(() => {
+          isScrolling = false;
+        }, 500);
+      },
+      { passive: false }
+    );
+  </script>
+</html>
